@@ -3,7 +3,7 @@
 %
 % example_1: Stalling 7th-edition, p.326
 %
-% clear all;
+clear;
 clc;
 %
 global p a;
@@ -29,7 +29,7 @@ end
 % the only single point in the plot is the vertex of the curve
 plot(XY(:, 1), XY(:, 2), 'O');
 axis([0, p, 0, p]); % restrict the upper bound to p on x, y axis
-grid on; % add grid lines
+grid on;            % add grid lines
 xlabel('x');
 ylabel('y');
 %
@@ -37,9 +37,13 @@ ylabel('y');
 GT = ones(index + 2, 3 * index); % (row, col)
 for ii = 1 : index
     G = XY(ii, :); % one point
-    GT(1, (ii-1)*3+1 : ii*3-1) = G;
+    GT(1, ((ii - 1)*3 + 1):(ii*3 - 1)) = G;
     for n = 2 : index+2
         P = point_multiplication(G, n);
-        GT(n, (ii-1)*3+1 : ii*3-1) = P;
+        GT(n, ((ii - 1)*3 + 1):(ii*3 - 1)) = P;
     end
 end
+
+
+
+
