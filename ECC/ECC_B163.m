@@ -1,9 +1,9 @@
 %
 % ECC B163 Elgama cryptographic system
 %
-% clear all;
+clera;
 clc;
-
+%
 global f fr ifx a b f_dec fr_dec a_dec b_dec;
 m = 163; % B-m == B163
 % split the large number into 6 row, cause the number is too large to
@@ -38,14 +38,12 @@ Gy_dec = double(Gy);
 left = addition_B(square_B(Gy_dec), multipliaction_B(Gx_dec, Gy_dec));
 right = addition_B(multiplication_B(square_B(Gx_dec), addition_B(Gx_dec, a_dec)), b_dec);
 check = any(left - right); % any( if != 0 ) return 1
-
-
-
+%
+%
 nb = ['00000065';'00000000';'00000000';'ffffffff';'ffffffff';'00000000'];
 na = ['00000029';'00000000';'ffffffff';'ffffffff';'ffffffff';'00000000'];
 M = 'Do not judge a book by its cover. Do not judge me from my outside.';
-
-
-
+%
+%
 
 
