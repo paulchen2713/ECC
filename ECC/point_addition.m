@@ -3,6 +3,7 @@
 %
 function R = point_addition(P, Q)
     global p;
+    %
     if P(1) == Q(1) && P(2) == Q(2)
         % if P == Q
         R = point_multiplication(P, 2);
