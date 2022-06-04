@@ -3,13 +3,13 @@
 %
 function out = bitshift_left_B(a, param)
     word_num = size(param.S, 1);
-    a = uint32(a);
-    bit_old = 0;
+    bit_old  = 0; a = uint32(a); 
     for i = 1:word_num
-        bit = bitget(a(i), 32);
+        bit  = bitget(a(i), 32);
         a(i) = bitshift(a(i), 1);
         a(i) = bitset(a(i), 1, bit_old);
         bit_old = bit;    
     end
     out = double(a);
 return
+
