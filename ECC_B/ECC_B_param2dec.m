@@ -1,5 +1,5 @@
 %
-% ECC_B_param2dec change parameter of ECC B series to decimal
+% ECC_B_param2dec function change parameter of ECC B series to decimal
 %
 function dec_param = ECC_B_param2dec(param)
     %   ECC_B_param: parameter of ECC B series of ECC
@@ -13,3 +13,4 @@ function dec_param = ECC_B_param2dec(param)
     dec_param.x = hex2dec(dec_param.x);
     dec_param.y = hex2dec(dec_param.y);
 end
+
