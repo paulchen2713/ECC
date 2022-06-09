@@ -5,6 +5,7 @@
 %
 clear;
 clc;
+%
 global p a;
 p = 257;
 a = 0;
@@ -40,6 +41,7 @@ ylabel('y');
 G = [2, 2];
 nb = 101;
 Pb = point_multiplication(G, nb);
+%
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % 
 % Encryption process
@@ -57,6 +59,7 @@ kPb = point_multiplication(Pb, k);
 %
 % C2 = Pm + kPb
 C2 = point_addition(Pm, kPb);
+%
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %
 % Decryption
@@ -69,6 +72,4 @@ nbC1 = point_multiplication(C1, nb); % multiplication order cannot be change
 % recovered message: R_Pm = C2 - nbC1
 nbC1(2) = -nbC1(2); % acquire '-nbC1'
 R_Pm = point_addition(C2, nbC1);
-
-
-
+%
