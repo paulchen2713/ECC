@@ -65,6 +65,7 @@ key_B = point_multiplication(Pa, nb);
 G = [4, 11];
 nb = 3;
 Pb = point_multiplication(G, nb);
+%
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % 
 % Encryption process
@@ -105,6 +106,7 @@ C2 = zeros(M_len, 2);
 for im = 1 : M_len
     C2(im, :) = point_addition(Pm(im, :), kPb); 
 end
+%
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %
 % Decryption
@@ -130,7 +132,4 @@ R_M = (char(floor(R_Pm(:, 1)/10)))'; % ()' will transpose the vector
 %
 fprintf('\n Original message is:   %s\n', M);
 fprintf('\n Recovered message is: %s\n', R_M);
-
-
-
-
+%
