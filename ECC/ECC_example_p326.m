@@ -2,6 +2,7 @@
 % ECC (Elliptic Curve Cryptography)
 %
 % example_p326: Stallings, 7th-edition, p.326
+%
 % y^2 = x^3 + ax + b
 %
 clear;
@@ -11,7 +12,6 @@ global p a;
 p = 23;
 a = 1;
 b = 1;
-%
 %
 XY = zeros(1, 2); % store every points solution
 index = 0;        % total number of points == index + 1
@@ -33,8 +33,6 @@ grid on;     % plot dotted grid line mode "on"
 xlabel('x');
 ylabel('y');
 %
-%
-%
 GT = ones(index + 2, 3*index);
 for ii = 1 : index 
     G = XY(ii, :);
@@ -44,6 +42,4 @@ for ii = 1 : index
         GT(n, (ii - 1)*3 + 1 : ii*3 - 1) = P;
     end
 end
-
-
 
